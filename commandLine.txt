@@ -7,6 +7,8 @@ Open up Terminal (Mac) or GitBash (PC)
 You should see a command prompt. What is yours? $ % ??
 Before the command prompt, do you see a ~ ? That lets you know you're in your home directory.
 
+If on a Mac, you can run 'exec bash' to switch from zsh to bash for this session (when you close your window it will reset to zsh).
+
 SECTION 1
 Listing files in your current directory (aka your working directory, aka where you are now)
 Commands in this section:
