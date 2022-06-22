@@ -1,0 +1,62 @@
+UNIX CHEATSHEET
+
+ls – directory listing
+ls -a – listing with hidden files
+ls -l – listing in list format
+ls -al - listing in list format with hidden files
+ls -F - listing with directories labeled
+ls <directory> - listing of what is in a specified directory
+
+
+pwd – show current directory
+cd <dir> – change directory to <dir>
+cd – change to home
+cd .. - change to one directory higher
+
+
+less <file> – scroll through the contents of <file>
+head <file> – output the first 10 lines of <file>
+tail <file> – output the last 10 lines of <file>
+<spacebar> - to scroll through "less"
+q - to exit "less"
+
+
+mkdir <dir> – create a directory <dir>
+
+
+rm <file> – delete <file> (permanent)
+rm -r <dir> – delete directory <dir> (permanent)
+rm -f <file> – force remove file (permanent)
+
+
+cp <file1> <file2> – copy <file1> to <file2>
+cp -r <dir1> <dir2> – copy <dir1> to <dir2>; create <dir2> if it
+ doesn't exist
+
+
+mv <file2> <file2> – rename or move <file1> to <file2> ; if <file2>
+ is an existing directory, moves <file1> into directory <file2>
+ 
+
+touch <file> – create or update <file>
+
+
+<tab> - autocomplete filenames
+<ctrl+C> - stop current command
+<up arrow> - scroll through previous commands
+
+
+top - display all running processes
+q - to exit "top"
+
+
+man <command> - View the manual for a particular command    OR    <command> --help
+
+
+vi <filename> - opens a file in vi; creates and opens if file doesn't already and exist
+i - insert mode; allows editing
+<esc> - exits insert mode; allows saving and exiting vi
+:q - exit vi if no changes were made to the file
+:wq - save changes and exit vi
+:q! - do not save changes and exit vi
+

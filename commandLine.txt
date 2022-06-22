@@ -1,0 +1,261 @@
+Command Line Basics
+
+TO START:
+Move the commandLine directory into your Documents directory (using drag and drop)
+Open up Terminal (Mac) or GitBash (PC)
+
+You should see a command prompt. What is yours? $ % ??
+Before the command prompt, do you see a ~ ? That lets you know you're in your home directory.
+
+SECTION 1
+Listing files in your current directory (aka your working directory, aka where you are now)
+Commands in this section:
+ls – directory listing
+ls -a – listing with hidden files
+ls -l – listing in list format
+ls -al - listing in list format with hidden files and directories
+ls -F - listing with directories labeled
+ls <directory> - listing of what is in a specified directory
+<tab> - autocomplete filenames
+(when you see -a or -l or -alF or -x after a command, these are called flags - flags change the command in some way)
+
+
+Type:
+ls
+ks
+ls -a
+ls -l
+ls -al
+ls -F
+ls -alF
+ls Documents
+ls -F Documents
+ls Documents -F
+ls Doc<tab>    OR    ls Documents
+
+
+Exercise:
+Pick a directory inside Documents. List the contents of that directory by creating a longer file path.
+Try it using tab complete.
+List all the contents of that directory, including any hidden files.
+
+
+SECTION 2
+Changing your current directory (aka moving around in your filesystem)
+Commands in this section:
+pwd – print working directory
+cd <dir> – change directory to <dir>
+cd – change to home
+cd .. - change to one directory higher
+
+Type:
+pwd
+ls
+cd Documents
+pwd
+ls
+cd ..
+pwd
+ls
+cd Documents
+cd commandLine
+pwd
+ls
+cd
+pwd
+cd Doc<tab> comman<tab>    OR    cd Documents/commandLine
+pwd
+cd ../../Downloads
+pwd
+cd ~/Documents/comman<tab>    OR    cd ~/Documents/commandLine
+
+
+Exercise:
+You are in the commandLine directory, inside Documents. 
+Can you think of at least two ways you can navigate to the Desktop directory from where you are now?
+
+
+SECTION 3
+Viewing files without exiting the command line
+Open up unixcheatsheet.txt in either TextEdit(Mac) or Notepad(PC)
+Commands in this section:
+less <file> – scroll through the contents of <file>
+head <file> – output the first 10 lines of <file>
+tail <file> – output the last 10 lines of <file>
+<spacebar> - to scroll through "less"
+q - to exit "less"
+
+Type:
+cd ~/Documents/commandLine
+ls
+less unixcheatsheet.txt
+<spacebar><spacebar>
+q
+less unixcheat<tab><tab><tab>t<tab>    OR    less unixcheatsheet.txt
+q
+less unixcheat<tab>p<tab>    OR    less unixcheatsheet.pdf
+q
+head unixcheatsheet.txt
+tail unixcheatsheet.txt
+
+
+Exercise:
+Use less to view this file: commandLine.txt. Use <space> to scroll through the file until the end. Use q to exit.
+
+
+SECTION 4
+Creating a new directory
+Commands in this section:
+mkdir <dir> – create a directory <dir>
+
+
+Type:
+pwd (make sure you're in the commandLine directory)
+ls
+mkdir exampleDir
+ls
+cd exam<tab>    OR    cd exampleDir
+ls
+cd ..
+
+Exercise:
+Make a new directory called "cheatsheets" inside the commandLine directory.
+
+
+SECTION 5
+Copying, moving, and renaming files
+Commands in this section:
+cp <file1> <file2> – copy <file1> to <file2>
+cp -r <dir1> <dir2> – copy <dir1> to <dir2>; create <dir2> if it doesn't exist
+mv <file1> <file2> – rename or move <file1> to <file2> ; if <file2> is an existing directory, moves <file1> into directory <file2>
+
+Type:
+ls
+cp unixcheatsheet.txt unixcheatsheetCOPY.txt
+ls
+less unix<tab>C<tab>    OR    less unixcheatsheetCOPY.txt
+q
+ls
+mv unix<tab>C<tab> exampleDir    OR    mv unixcheatsheetCOPY.txt exampleDir
+ls
+ls exampleDir
+ls
+cp -r exampleDir exampleDir2
+ls
+ls exampleDir2
+mv exampleDir2/unixcheatsheetCOPY.txt exampleDir2/unixcheatsheet2.txt
+<up arrow><up arrow> (until you see ls exampleDir2)
+ls
+
+Exercise:
+Copy the file unixcheatsheet2.txt that is in exampleDir2 into the cheatsheets directory.
+Rename the file unix.txt.
+You can do this in one or multiple lines of code.
+
+
+SECTION 6
+Deleting files and directories (permanent!!!!!)
+Commands in this section:
+rm <file> – delete <file> (permanent)
+rm -r <dir> – delete directory <dir> (permanent)
+rm -f <file> – force remove file (permanent)
+
+Type:
+cd ~/Documents/commandLine
+cp unixcheatsheet.txt unixTODELETE.txt
+ls
+rm unixTODELETE.txt
+ls
+ls exampleDir
+rm -r exampleDir
+ls
+
+Exercise:
+Permanently delete the directory exampleDir2.
+
+
+SECTION 7
+Creating a new empty file
+Commands in this section:
+touch <file> – create or update <file>
+
+Type:
+ls
+touch myFile.txt
+ls
+less myFile.txt
+q
+
+
+SECTION 8
+Stopping the current running process
+Commands in this section:
+ctrl+C - stop current command
+
+Type:
+cd
+pwd
+find *
+ctrl+C
+
+
+SECTION 9
+Checking what's running
+Commands in this section:
+top - display all running processes
+q - to exit "top"
+
+Type:
+top
+q
+
+
+SECTION 10
+Finding out more about a command
+Commands in this section:
+man <command> - View the manual for a particular command    OR    <command> --help
+
+Type:
+man ls     OR    ls --help
+<spacebar><spacebar>
+q
+
+Exercise:
+Check out the manual for the cp command. What does the -n flag do?
+
+
+SECTION 11
+Editing a file
+Commands in this section:
+vi <filename> - opens a file in vi; creates and opens if file doesn't already and exist
+i - insert mode; allows editing
+<esc> - exits insert mode; allows saving and exiting vi
+:q - exit vi if no changes were made to the file
+:wq - save changes and exit vi
+:q! - do not save changes and exit vi
+
+Type:
+cd Documents/commandLine
+ls
+vi myFile.txt
+i
+<esc>
+i
+<esc>
+i
+<esc>
+:q
+vi myFile.txt
+i
+<add text>
+esc
+:wq
+less myFile.txt
+q
+vi myFile.txt
+i
+<add text>
+esc
+:q!
+less myFile.txt
+q
