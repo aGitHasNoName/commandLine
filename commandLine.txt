@@ -1,7 +1,7 @@
 Command Line Basics
 
 TO START:
-Move the commandLine directory into your Documents directory (using drag and drop)
+Move the commandLine-main directory into your Documents directory (using drag and drop)
 Open up Terminal (Mac) or GitBash (PC)
 
 You should see a command prompt. What is yours? $ % ??
@@ -60,20 +60,20 @@ cd ..
 pwd
 ls
 cd Documents
-cd commandLine
+cd commandLine-main
 pwd
 ls
 cd
 pwd
-cd Doc<tab> comman<tab>    OR    cd Documents/commandLine
+cd Doc<tab> comman<tab>    OR    cd Documents/commandLine-main
 pwd
 cd ../../Downloads
 pwd
-cd ~/Documents/comman<tab>    OR    cd ~/Documents/commandLine
+cd ~/Documents/comman<tab>    OR    cd ~/Documents/commandLine-main
 
 
 Exercise:
-You are in the commandLine directory, inside Documents. 
+You are in the commandLine-main directory, inside Documents. 
 Can you think of at least two ways you can navigate to the Desktop directory from where you are now?
 
 
@@ -88,14 +88,15 @@ tail <file> – output the last 10 lines of <file>
 q - to exit "less"
 
 Type:
-cd ~/Documents/commandLine
+cd ~/Documents/commandLine-main
 ls
 less unixcheatsheet.txt
 <spacebar><spacebar>
 q
-less unixcheat<tab><tab><tab>t<tab>    OR    less unixcheatsheet.txt
+less unixcheat<tab>    OR    less unixcheatsheet.txt
 q
-less unixcheat<tab>p<tab>    OR    less unixcheatsheet.pdf
+less unix_<tab>b<tab>    OR    less unix_vi_basics_cheatsheet.pdf
+y
 q
 head unixcheatsheet.txt
 tail unixcheatsheet.txt
@@ -112,7 +113,7 @@ mkdir <dir> – create a directory <dir>
 
 
 Type:
-pwd (make sure you're in the commandLine directory)
+pwd (make sure you're in the commandLine-main directory)
 ls
 mkdir exampleDir
 ls
@@ -142,6 +143,7 @@ mv unix<tab>C<tab> exampleDir    OR    mv unixcheatsheetCOPY.txt exampleDir
 ls
 ls exampleDir
 ls
+cp exampleDir exampleDir2
 cp -r exampleDir exampleDir2
 ls
 ls exampleDir2
@@ -237,7 +239,7 @@ i - insert mode; allows editing
 :q! - do not save changes and exit vi
 
 Type:
-cd Documents/commandLine
+cd ~/Documents/commandLine-main
 ls
 vi myFile.txt
 i
